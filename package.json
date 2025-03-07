@@ -1,0 +1,15 @@
+{
+  "name": "tsm-utils",
+  "version": "0.0.0",
+  "description": "Defaults utils functions and configs used across projects",
+  "main": "src/index.ts",
+  "scripts": {
+    "tsc": "tsc",
+    "node:ts": "node --no-warnings --experimental-strip-types --experimental-specifier-resolution=node"
+  },
+  "author": "Tiago Simionato",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  }
+}
