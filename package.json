@@ -1,6 +1,6 @@
 {
   "name": "tsm-utils",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Defaults utils functions and configs used across projects",
   "main": "src/index.ts",
   "scripts": {
