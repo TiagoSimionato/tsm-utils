@@ -1,12 +1,16 @@
 {
   "name": "tsm-utils",
   "type": "module",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Default utils functions and configs used across projects",
   "author": "Tiago Simionato",
   "license": "ISC",
   "repository": {
     "url": "TiagoSimionato/tsm-utils"
+  },
+  "exports": {
+    ".": "./src/index.ts",
+    "./lint": "./src/lintConfig.js"
   },
   "main": "src/index.ts",
   "scripts": {
@@ -15,17 +19,19 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
-  "devDependencies": {
+  "dependencies": {
     "@antfu/eslint-config": "^4.8.1",
     "@eslint-react/eslint-plugin": "^1.31.0",
     "@eslint/js": "^9.22.0",
-    "@typescript-eslint/utils": "^8.24.0",
-    "@vue/compiler-sfc": "^3.3.0",
     "eslint": "^9.22.0",
     "eslint-plugin-prefer-arrow": "^1.2.3",
     "eslint-plugin-react": "^7.37.4",
     "eslint-plugin-react-hooks": "^5.2.0",
-    "eslint-plugin-react-refresh": "^0.4.19",
+    "eslint-plugin-react-refresh": "^0.4.19"
+  },
+  "devDependencies": {
+    "@typescript-eslint/utils": "^8.24.0",
+    "@vue/compiler-sfc": "^3.3.0",
     "typescript": "^5.3.3"
   }
 }
