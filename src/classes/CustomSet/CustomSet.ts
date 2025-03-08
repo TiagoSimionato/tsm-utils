@@ -1,3 +1,5 @@
+import { CustomSetArray } from "types";
+
 export class CustomSet<T> extends Set<T> {
   private equals: (x: T, y: T) => boolean;
 
@@ -29,7 +31,27 @@ export class CustomSet<T> extends Set<T> {
     return false;
   }
 
-  static intersection<T>(x: CustomSet<T>, y: CustomSet<T>): CustomSet<T> {
+  static intersection<T>(x: CustomSet<T>, y: CustomSet<T>): CustomSet<T>;
+  static intersection<T>(x: CustomSetArray<T>, y?: undefined): CustomSet<T>;
+  static intersection<T>(x: CustomSetArray<T> | CustomSet<T>, y?: CustomSet<T>): CustomSet<T> {
+    if (Array.isArray(x)) {
+      return CustomSet.arrayIntersection(x);
+    }
+    if (!!y) {
+      return CustomSet.elemIntersection(x, y);
+    }
+    throw TypeError('Invalid Parameters');
+  }
+
+  private static arrayIntersection<T>(sets: CustomSetArray<T>): CustomSet<T> {
+    const firstSet = sets[0];
+    return sets.slice(1).reduce(
+      (acc, cur) => CustomSet.elemIntersection(acc, cur),
+      firstSet
+    );
+  }
+
+  private static elemIntersection<T>(x: CustomSet<T>, y: CustomSet<T>): CustomSet<T> {
     return new CustomSet(
       x.equals,
       [...x].filter((value) => y.has(value))
@@ -37,21 +59,21 @@ export class CustomSet<T> extends Set<T> {
   }
 
   static union<T>(x: CustomSet<T>, y: CustomSet<T>): CustomSet<T>;
-  static union<T>(x: CustomSet<T>[], y?: undefined): CustomSet<T>;
+  static union<T>(x: CustomSetArray<T>, y?: undefined): CustomSet<T>;
   static union<T>(
-    x: CustomSet<T>[] | CustomSet<T>,
+    x: CustomSetArray<T> | CustomSet<T>,
     y: CustomSet<T> | undefined = undefined
   ): CustomSet<T> {
     if (Array.isArray(x)) {
       return CustomSet.arrayUnion(x);
-    } else if (!!y) {
-      return CustomSet.elemUnion(x, y);
-    } else {
-      throw TypeError('Invalid Parameters');
     }
+    if (!!y) {
+      return CustomSet.elemUnion(x, y);
+    }
+    throw TypeError('Invalid Parameters');
   }
 
-  private static arrayUnion<T>(sets: CustomSet<T>[]): CustomSet<T> {
+  private static arrayUnion<T>(sets: CustomSetArray<T>): CustomSet<T> {
     return sets.reduce(
       (acc, cur) => new CustomSet(sets[0].equals, [...acc, ...cur]),
       new CustomSet(sets[0].equals)
@@ -62,5 +84,3 @@ export class CustomSet<T> extends Set<T> {
     return new CustomSet<T>(x.equals, [...x, ...y]);
   }
 }
-
-export const TEST = 'aa';
