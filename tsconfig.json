@@ -1,17 +1,21 @@
 {
   "compilerOptions": {
-    "baseUrl": "src",
-    "outDir": "dist",
-    "noEmit": true,
     "target": "ES2020",
+    "jsx": "react-jsx",
+    "baseUrl": "src",
     "module": "ESNext",
     "moduleResolution": "node",
-    "isolatedModules": true,
-    "jsx": "react-jsx",
-    "allowJs": false,
+    "allowJs": true,
     "strict": true,
     "noImplicitAny": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-  }
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "outDir": "dist",
+    "skipLibCheck": true
+  },
+  "exclude": [
+    "**/node_modules"
+  ]
 }
