@@ -1,4 +1,4 @@
-declare const _default: ({
+export const lintConfig: ({
   files: string[];
   rules: {
     'antfu/no-top-level-await': string;
@@ -11,4 +11,3 @@ declare const _default: ({
     'import/no-default-export': string;
   };
 } | import('@antfu/eslint-config').TypedFlatConfigItem)[];
-export default _default;

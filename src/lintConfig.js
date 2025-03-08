@@ -1,7 +1,7 @@
 import config from '@antfu/eslint-config';
 import pluginPreferArrow from 'eslint-plugin-prefer-arrow';
 
-export default [
+export const lintConfig = [
   ...(await config({
     ignores: [
       'webp.js',

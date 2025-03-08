@@ -1,10 +1,13 @@
 {
   "name": "tsm-utils",
   "type": "module",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Default utils functions and configs used across projects",
   "author": "Tiago Simionato",
   "license": "ISC",
+  "repository": {
+    "url": "TiagoSimionato/tsm-utils"
+  },
   "main": "src/index.ts",
   "scripts": {
     "tsc": "tsc",
