@@ -16,6 +16,8 @@ export const lintConfig = [
       'arrow-body-style': 'error',
       'import/no-default-export': 'error',
       'no-console': 'warn',
+      'node/prefer-global/buffer': 'off',
+      'node/prefer-global/process': 'off',
       'perfectionist/sort-array-includes': 'error',
       'perfectionist/sort-enums': 'error',
       'perfectionist/sort-exports': 'error',
@@ -42,6 +44,16 @@ export const lintConfig = [
       'ts/no-unsafe-call': 'off',
       'ts/no-unsafe-return': 'off',
       'unused-imports/no-unused-imports': 'error',
+      'unused-imports/no-unused-vars': [
+        'error',
+        {
+          args: 'after-used',
+          argsIgnorePattern: '^_',
+          caughtErrors: 'none',
+          vars: 'all',
+          varsIgnorePattern: '^_',
+        },
+      ],
     },
     stylistic: {
       indent: 2,
@@ -51,7 +63,7 @@ export const lintConfig = [
     },
   })),
   {
-    files: ['**/layout.tsx', '**/page.tsx', '**/not-found.ts', 'eslint.config.js', '**/reportWebVitals.ts'],
+    files: ['**/layout.tsx', '**/page.tsx', '**/not-found.ts', '**.config.**', '**/reportWebVitals.ts', 'tailwind.config**', 'next.config**'],
     rules: {
       'import/no-default-export': 'off',
     },

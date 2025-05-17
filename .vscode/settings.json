@@ -1,7 +1,0 @@
-{
-  "eslint.useFlatConfig": true,
-  "editor.codeActionsOnSave": {
-    "source.organizeImports": "never",
-    "source.removeUnusedImports": "always"
-  }
-}
