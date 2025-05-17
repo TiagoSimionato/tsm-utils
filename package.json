@@ -6,7 +6,7 @@
   "author": "Tiago Simionato",
   "license": "ISC",
   "repository": {
-    "url": "TiagoSimionato/tsm-utils"
+    "url": "git+https://github.com/TiagoSimionato/tsm-utils.git"
   },
   "exports": {
     ".": "./src/index.ts",
