@@ -1,7 +1,7 @@
 {
   "name": "tsm-utils",
   "type": "module",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Default utils functions and configs used across projects",
   "author": "Tiago Simionato",
   "license": "ISC",
