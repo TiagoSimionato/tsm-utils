@@ -4,7 +4,7 @@
   "version": "0.3.4",
   "description": "Default utils functions and configs used across projects",
   "author": "Tiago Simionato",
-  "license": "ISC",
+  "license": "GPL-3.0-only",
   "repository": {
     "url": "git+https://github.com/TiagoSimionato/tsm-utils.git"
   },
