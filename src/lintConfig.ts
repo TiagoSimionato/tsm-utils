@@ -1,7 +1,8 @@
+import type { Linter } from 'eslint';
 import config from '@antfu/eslint-config';
 import pluginPreferArrow from 'eslint-plugin-prefer-arrow-functions';
 
-export const lintConfig = [
+export const lintConfig: Linter.Config[] = [
   ...(await config({
     ignores: [
       'webp.js',

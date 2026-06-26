@@ -3,6 +3,7 @@
     "target": "ES2020",
     "jsx": "react-jsx",
     "rootDir": "./",
+    "module": "esnext",
     "moduleResolution": "bundler",
     "paths": {
       "*": [
@@ -19,8 +20,5 @@
     "outDir": "dist",
     "skipLibCheck": true
   },
-  "exclude": [
-    "node_modules",
-    "dist"
-  ]
+  "include": ["src"]
 }
