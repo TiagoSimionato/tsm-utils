@@ -1,7 +1,7 @@
 import type { CustomSetArray } from 'types';
 
 export class CustomSet<T> extends Set<T> {
-  private equals: (x: T, y: T) => boolean;
+  private readonly equals: (x: T, y: T) => boolean;
 
   constructor(equals: (x: T, y: T) => boolean, initialValues?: T[]) {
     super();
