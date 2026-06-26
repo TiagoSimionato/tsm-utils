@@ -1,7 +1,7 @@
 {
   "name": "tsm-utils",
   "type": "module",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Default utils functions and configs used across projects",
   "author": "Tiago Simionato",
   "license": "ISC",
@@ -12,7 +12,8 @@
     ".": "./dist/src/index.js",
     "./lint": "./dist/src/lintConfig.js"
   },
-  "main": "dist/src/index.js",
+  "types": "./dist/src/index.d.ts",
+  "files": ["dist"],
   "scripts": {
     "tsc": "tsc",
     "node:ts": "node --no-warnings --experimental-strip-types --experimental-specifier-resolution=node",
