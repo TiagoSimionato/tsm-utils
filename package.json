@@ -9,10 +9,10 @@
     "url": "git+https://github.com/TiagoSimionato/tsm-utils.git"
   },
   "exports": {
-    ".": "./src/index.ts",
-    "./lint": "./src/lintConfig.js"
+    ".": "./dist/src/index.js",
+    "./lint": "./dist/src/lintConfig.js"
   },
-  "main": "src/index.ts",
+  "main": "dist/src/index.js",
   "scripts": {
     "tsc": "tsc",
     "node:ts": "node --no-warnings --experimental-strip-types --experimental-specifier-resolution=node",
