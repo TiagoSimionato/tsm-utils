@@ -1,3 +1,1 @@
-import { lintConfig } from './src/lintConfig.js';
-
-export default lintConfig;
+export { lintConfig as default } from './src/lintConfig.js';
