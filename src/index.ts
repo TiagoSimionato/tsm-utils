@@ -1,3 +1,4 @@
-export { createAPI, RequestConfig } from 'api';
-export { CustomSet } from 'classes';
-export { lintConfig } from 'lintConfig';
+export * from './classes';
+export * from './functions';
+export * from './lintConfig';
+export * from './types';

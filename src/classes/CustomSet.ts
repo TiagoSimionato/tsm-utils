@@ -1,4 +1,4 @@
-import type { CustomSetArray } from 'types';
+import type { CustomSetArray } from '../types/CustomSet';
 
 export class CustomSet<T> extends Set<T> {
   private readonly equals: (x: T, y: T) => boolean;

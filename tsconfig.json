@@ -1,17 +1,11 @@
 {
   "compilerOptions": {
     "target": "esnext",
-    "jsx": "react-jsx",
     "rootDir": "./",
     "module": "esnext",
     "moduleResolution": "bundler",
-    "paths": {
-      "*": [
-        "./src/*"
-      ]
-    },
     "allowImportingTsExtensions": false,
-    "allowJs": true,
+    "allowJs": false,
     "strict": true,
     "noImplicitAny": true,
     "noUnusedLocals": true,
