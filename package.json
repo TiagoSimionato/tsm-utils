@@ -13,7 +13,9 @@
     "./lint": "./dist/src/lintConfig.js"
   },
   "types": "./dist/src/index.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "tsc": "tsc",
     "node:ts": "node --no-warnings --experimental-strip-types --experimental-specifier-resolution=node",
