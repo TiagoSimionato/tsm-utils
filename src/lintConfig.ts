@@ -6,6 +6,7 @@ export const lintConfig: Linter.Config[] = [
   ...(await config({
     ignores: [
       'webp.js',
+      '*.md',
     ],
     jsx: true,
     plugins: {
@@ -63,7 +64,7 @@ export const lintConfig: Linter.Config[] = [
     },
   })),
   {
-    files: ['**/layout.tsx', '**/page.tsx', '**/not-found.ts', '**.config.**', '**/reportWebVitals.ts', 'tailwind.config**', 'next.config**'],
+    files: ['**/layout.tsx', '**/page.tsx', '**/not-found.ts', '**.config.**', '**/reportWebVitals.ts', 'tailwind.config**', 'next.config**', '**/*.md'],
     rules: {
       'import/no-default-export': 'off',
     },
