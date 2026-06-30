@@ -2,6 +2,13 @@
 
 Npm package with utility code shared across projects
 
+## Default Lint config
+
+```js
+// eslint.config.js
+export { lintConfig as default } from 'tsm-utils/lint';
+```
+
 ## Functions
 
 ### createAPI
