@@ -8,7 +8,7 @@ Npm package with utility code shared across projects
 
 ```ts
 export const api = createAPI('/api');
-export const api = createAPI('https://api.example.com');
+export const exampleApi = createAPI('https://api.example.com');
 ```
 
 ## Classes
