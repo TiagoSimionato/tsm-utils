@@ -22,9 +22,12 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
+  "peerDependencies": {
+    "@tanstack/react-query": "^5",
+    "axios": "^1.6"
+  },
   "dependencies": {
     "@antfu/eslint-config": "^9.1.0",
-    "axios": "^1.18.1",
     "eslint": "^9.7",
     "eslint-plugin-prefer-arrow-functions": "^3.9.1"
   },
