@@ -18,6 +18,24 @@ export const api = createAPI('/api');
 export const exampleApi = createAPI('https://api.example.com');
 ```
 
+## handlePromise
+
+HOF that automatically handles promisse rejections and adjusts return type. Optionally handles the error
+
+```ts
+type Foo = (bar: string) => Promise<string | undefined>;
+
+export const foo: Foo = handlePromise(
+  async (bar: string) => {
+    // do something async
+    return '';
+  },
+  (error) => {
+    console.log(error);
+  },
+);
+```
+
 ## Classes
 
 ### CustomSet
