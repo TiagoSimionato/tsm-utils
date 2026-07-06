@@ -20,7 +20,8 @@
     "tsc": "tsc",
     "node:ts": "node --no-warnings --experimental-strip-types --experimental-specifier-resolution=node",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "publish": "rm -rf dist && tsc && npm publish"
   },
   "peerDependencies": {
     "@tanstack/react-query": "^5",
