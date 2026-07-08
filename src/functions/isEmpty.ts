@@ -1,9 +1,14 @@
 /**
- * @description Checks if the value is undefined, null, empty string or empty array
+ * @description Checks if the value is undefined, null, empty string, empty array or string of an empty object
  * @param {unknown} v - The value to check
  * @returns {boolean} - Return true if the value is empty
  */
-export const isEmptyValue = (v: unknown): boolean => v === '' || v === undefined || v === null || (Array.isArray(v) && v.length === 0);
+export const isEmptyValue = (v: unknown): boolean => v === ''
+  || v === undefined
+  || v === null
+  || (Array.isArray(v) && v.length === 0)
+  || (typeof v === 'string' && v.replaceAll(/[[\]{}]/g, '').length === 0)
+  || JSON.stringify(v).replaceAll(/[[\]{}]/g, '').length === 0;
 
 /**
  * @description Checks if the value is an object and all it's keys are empty values
